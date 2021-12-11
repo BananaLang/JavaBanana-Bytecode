@@ -1,4 +1,4 @@
-package io.github.bananalang.common.constants;
+package io.github.bananalang.bytecode.constants;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;

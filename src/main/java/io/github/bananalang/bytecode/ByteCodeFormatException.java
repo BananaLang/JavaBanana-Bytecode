@@ -1,4 +1,4 @@
-package io.github.bananalang.common;
+package io.github.bananalang.bytecode;
 
 public class ByteCodeFormatException extends RuntimeException {
     /** Constructs a new runtime exception with {@code null} as its

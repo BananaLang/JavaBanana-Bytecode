@@ -1,4 +1,4 @@
-package io.github.bananalang.common;
+package io.github.bananalang.bytecode;
 
 public final class ByteCodes {
     public static final short

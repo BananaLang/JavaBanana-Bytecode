@@ -1,4 +1,4 @@
-package io.github.bananalang.common;
+package io.github.bananalang.bytecode;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import io.github.bananalang.common.constants.BBCConstant;
+import io.github.bananalang.bytecode.constants.BBCConstant;
 
 public final class NoCollisionsConstantTable {
     private final List<BBCConstant> table = new ArrayList<>();

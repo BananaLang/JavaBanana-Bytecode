@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.Arrays;
 
-import io.github.bananalang.common.ByteCodeFile;
-import io.github.bananalang.common.ByteCodes;
-import io.github.bananalang.common.NoCollisionsConstantTable;
-import io.github.bananalang.common.constants.CharsConstant;
-import io.github.bananalang.common.constants.DoubleConstant;
-import io.github.bananalang.common.constants.IntegerConstant;
-import io.github.bananalang.common.constants.StringConstant;
+import io.github.bananalang.bytecode.ByteCodeFile;
+import io.github.bananalang.bytecode.ByteCodes;
+import io.github.bananalang.bytecode.NoCollisionsConstantTable;
+import io.github.bananalang.bytecode.constants.CharsConstant;
+import io.github.bananalang.bytecode.constants.DoubleConstant;
+import io.github.bananalang.bytecode.constants.IntegerConstant;
+import io.github.bananalang.bytecode.constants.StringConstant;
 
 public class ByteCodeFileTest {
     public static void main(String[] args) throws IOException {

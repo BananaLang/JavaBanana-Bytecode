@@ -1,4 +1,4 @@
-package io.github.bananalang.common;
+package io.github.bananalang.bytecode;
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import io.github.bananalang.common.constants.BBCConstant;
+import io.github.bananalang.bytecode.constants.BBCConstant;
 
 public final class ByteCodeFile {
     public static final short VERSION_MAJOR = 0, VERSION_MINOR = 0;

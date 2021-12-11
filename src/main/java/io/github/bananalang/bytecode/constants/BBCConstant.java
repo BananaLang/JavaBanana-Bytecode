@@ -1,4 +1,4 @@
-package io.github.bananalang.common.constants;
+package io.github.bananalang.bytecode.constants;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,7 +8,7 @@ import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
-import io.github.bananalang.common.ByteCodeFormatException;
+import io.github.bananalang.bytecode.ByteCodeFormatException;
 
 public abstract class BBCConstant {
     public static final short INTEGER = 0,
