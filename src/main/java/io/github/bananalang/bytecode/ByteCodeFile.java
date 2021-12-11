@@ -244,9 +244,6 @@ public final class ByteCodeFile {
                 default:
                     s = ByteCodes.getName(byteCodeType);
                     out.print(s);
-                    for (int i = 0; i < 15 - s.length(); i++) {
-                        out.print(" ");
-                    }
                     break;
             }
             out.println();
