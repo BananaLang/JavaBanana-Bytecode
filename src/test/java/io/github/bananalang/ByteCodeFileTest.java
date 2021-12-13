@@ -23,7 +23,7 @@ public class ByteCodeFileTest {
         bbc.getConstantTable().addAll(constantTable.getTable());
         bbc.putLoadConstant(0);
         bbc.putLoadConstant(1);
-        bbc.putCode(ByteCodes.MUL);
+        bbc.putCode(ByteCodes.MULTIPLY);
         bbc.putLoadConstant(3);
         bbc.putCode(ByteCodes.ADD);
         bbc.putCode(ByteCodes.DEBUG_PRINT);

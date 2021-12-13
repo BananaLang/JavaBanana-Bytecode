@@ -121,14 +121,28 @@ public final class ByteCodeFile {
             int width;
             switch (byteCodeType) {
                 case ByteCodes.DEBUG_PRINT:
-                case ByteCodes.ADD:
-                case ByteCodes.SUB:
-                case ByteCodes.MUL:
-                case ByteCodes.DIV:
                 case ByteCodes.POP:
                 case ByteCodes.LOAD_0:
                 case ByteCodes.LOAD_1:
                 case ByteCodes.LOAD_2:
+                case ByteCodes.LOGICAL_OR:
+                case ByteCodes.LOGICAL_AND:
+                case ByteCodes.BITWISE_OR:
+                case ByteCodes.BITWISE_XOR:
+                case ByteCodes.BITWISE_AND:
+                case ByteCodes.EQUALS:
+                case ByteCodes.NOT_EQUALS:
+                case ByteCodes.LESS_THAN:
+                case ByteCodes.GREATER_THAN:
+                case ByteCodes.LESS_THAN_EQUALS:
+                case ByteCodes.GREATER_THAN_EQUALS:
+                case ByteCodes.LEFT_SHIFT:
+                case ByteCodes.RIGHT_SHIFT:
+                case ByteCodes.ADD:
+                case ByteCodes.SUBTRACT:
+                case ByteCodes.MULTIPLY:
+                case ByteCodes.DIVIDE:
+                case ByteCodes.MODULUS:
                     width = 0;
                     break;
                 case ByteCodes.LOAD_BYTE:
