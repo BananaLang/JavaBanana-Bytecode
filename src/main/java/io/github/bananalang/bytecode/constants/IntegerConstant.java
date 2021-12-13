@@ -4,6 +4,8 @@ import java.math.BigInteger;
 import java.nio.ByteBuffer;
 
 public final class IntegerConstant extends BBCConstant {
+    public static final IntegerConstant ZERO = new IntegerConstant(BigInteger.ZERO);
+
     public final BigInteger value;
 
     public IntegerConstant(BigInteger value) {
@@ -13,9 +15,17 @@ public final class IntegerConstant extends BBCConstant {
     @Override
     public ByteBuffer write(ByteBuffer bb) {
         bb = ensureCapacity(bb, 2).putShort(INTEGER);
-        byte[] data = value.toByteArray();
+        if (value.signum() == 0) {
+            return ensureCapacity(bb, 4).putInt(0);
+        }
+        byte[] data = new byte[(value.bitLength() + 7) / 8];
+        BigInteger x = value.signum() == 1 ? value : value.negate();
+        for (int i = 0; i < data.length; i++) {
+            data[i] = x.byteValue();
+            x = x.shiftRight(8);
+        }
         return ensureCapacity(bb, 4 + data.length)
-               .putInt(data.length)
+               .putInt(data.length * value.signum())
                .put(data);
     }
 

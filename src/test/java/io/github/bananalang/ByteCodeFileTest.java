@@ -16,7 +16,7 @@ public class ByteCodeFileTest {
     public static void main(String[] args) throws IOException {
         ByteCodeFile bbc = new ByteCodeFile();
         NoCollisionsConstantTable constantTable = new NoCollisionsConstantTable();
-        constantTable.add(new IntegerConstant(BigInteger.valueOf(504)));
+        constantTable.add(new IntegerConstant(BigInteger.valueOf(-128973)));
         constantTable.add(new DoubleConstant(35.2));
         constantTable.add(new CharsConstant(" is a number"));
         constantTable.add(new StringConstant(2));

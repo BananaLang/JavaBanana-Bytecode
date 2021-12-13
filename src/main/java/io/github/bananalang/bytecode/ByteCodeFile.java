@@ -17,7 +17,7 @@ import java.util.List;
 import io.github.bananalang.bytecode.constants.BBCConstant;
 
 public final class ByteCodeFile {
-    public static final short VERSION_MAJOR = 0, VERSION_MINOR = 0;
+    public static final short VERSION_MAJOR = 0, VERSION_MINOR = 1;
 
     private static final ByteBuffer EMPTY_BYTEBUFFER = ByteBuffer.allocate(0);
 

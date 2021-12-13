@@ -37,10 +37,19 @@ public abstract class BBCConstant {
         int type = in.read() | (in.read() << 8);
         switch (type) {
             case INTEGER: {
-                int len = in.read() | (in.read() << 8) | (in.read() << 16) | (in.read() << 24);
+                int signLen = in.read() | (in.read() << 8) | (in.read() << 16) | (in.read() << 24);
+                if (signLen == 0) {
+                    return IntegerConstant.ZERO;
+                }
+                int sign = signLen < 0 ? -1 : 1;
+                int len = signLen * sign;
                 byte[] data = new byte[len];
                 in.read(data);
-                return new IntegerConstant(new BigInteger(data));
+                BigInteger result = BigInteger.valueOf(data[0] & 0xff);
+                for (int i = 1, shift = 8; i < len; i++, shift += 8) {
+                    result = result.or(BigInteger.valueOf(data[i] & 0xff).shiftLeft(shift));
+                }
+                return new IntegerConstant(sign == 1 ? result : result.negate());
             }
             case CHARS: {
                 int hash = in.read() | (in.read() << 8) | (in.read() << 16) | (in.read() << 24);
