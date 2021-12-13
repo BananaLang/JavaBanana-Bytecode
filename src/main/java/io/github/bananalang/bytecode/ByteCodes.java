@@ -31,7 +31,12 @@ public final class ByteCodes {
     SUBTRACT = 129,
     MULTIPLY = 130,
     DIVIDE = 131,
-    MODULUS = 145;
+    MODULUS = 145,
+
+    UNARY_PLUS = 146,
+    NEGATE = 147,
+    LOGICAL_NOT = 148,
+    BITWISE_INVERT = 149;
 
     @Deprecated
     public static final short SUB = SUBTRACT, MUL = MULTIPLY, DIV = DIVIDE;
@@ -96,6 +101,14 @@ public final class ByteCodes {
                 return "DIVIDE";
             case MODULUS:
                 return "MODULUS";
+            case UNARY_PLUS:
+                return "UNARY_PLUS";
+            case NEGATE:
+                return "NEGATE";
+            case LOGICAL_NOT:
+                return "LOGICAL_NOT";
+            case BITWISE_INVERT:
+                return "BITWISE_INVERT";
             default:
                 return "UNKNOWN_" + Integer.toHexString(Short.toUnsignedInt((short)code));
         }

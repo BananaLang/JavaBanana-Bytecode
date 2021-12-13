@@ -143,6 +143,10 @@ public final class ByteCodeFile {
                 case ByteCodes.MULTIPLY:
                 case ByteCodes.DIVIDE:
                 case ByteCodes.MODULUS:
+                case ByteCodes.UNARY_PLUS:
+                case ByteCodes.NEGATE:
+                case ByteCodes.LOGICAL_NOT:
+                case ByteCodes.BITWISE_INVERT:
                     width = 0;
                     break;
                 case ByteCodes.LOAD_BYTE:
